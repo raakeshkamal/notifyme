@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.raakesh.notify_me" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.parse.starter.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.parse.starter.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Loginactivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Mainactivity"
+            android:label="My Notice" >
+        </activity>
+        <activity
+            android:name=".Signupactivity"
+            android:label="Sign up" >
+        </activity>
+        <activity
+            android:name=".Buyandsell"
+            android:label="Buy and Sell" >
+        </activity>
+        <activity
+            android:name=".Editnotification"
+            android:label="Edit notification" >
+        </activity>
+        <activity
+            android:name=".Lostandfound"
+            android:label="Lost and Found" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="My Posts" >
+        </activity>
+        <activity
+            android:name=".Mydepartmentactivity"
+            android:label="@string/department_code" >
+        </activity>
+        <activity
+            android:name=".Myhostel"
+            android:label="My Hostel" >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.example.raakesh.notify_me" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Admin"
+            android:label="@string/title_activity_admin" >
+        </activity>
+        <activity
+            android:name=".Approval"
+            android:label="@string/title_activity_approval" >
+        </activity>
+        <activity
+            android:name=".ccw"
+            android:label="@string/title_activity_ccw" >
+        </activity>
+        <activity
+            android:name=".Mech"
+            android:label="@string/title_activity_mech" >
+        </activity>
+        <activity
+            android:name=".Aero"
+            android:label="@string/title_activity_aero" >
+        </activity>
+        <activity
+            android:name=".AppMech"
+            android:label="@string/title_activity_app_mech" >
+        </activity>
+        <activity
+            android:name=".Ocean"
+            android:label="@string/title_activity_ocean" >
+        </activity>
+        <activity
+            android:name=".BioTech"
+            android:label="@string/title_activity_bio_tech" >
+        </activity>
+        <activity
+            android:name=".Otherdept"
+            android:label="Other Department" >
+        </activity>
+        <activity
+            android:name=".Chem"
+            android:label="@string/title_activity_chem" >
+        </activity>
+        <activity
+            android:name=".Civil"
+            android:label="@string/title_activity_civil" >
+        </activity>
+        <activity
+            android:name=".Comp"
+            android:label="@string/title_activity_comp" >
+        </activity>
+        <activity
+            android:name=".Physics"
+            android:label="@string/title_activity_physics" >
+        </activity>
+        <activity
+            android:name=".Elec"
+            android:label="@string/title_activity_elec" >
+        </activity>
+        <activity
+            android:name=".Ed"
+            android:label="@string/title_activity_ed" >
+        </activity>
+        <activity
+            android:name=".Meta"
+            android:label="@string/title_activity_meta" >
+        </activity>
+    </application>
+
+</manifest>
